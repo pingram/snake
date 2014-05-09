@@ -8,13 +8,19 @@
 
   UI.prototype.start = function() {
     var ui = this;
-    var xx = window.setInterval(function() {
+    var timerId = window.setInterval(function() {
         ui.board.snake.move();
-
-        ui.board.render();
+        var boardString = ui.board.render();
+        ui.$el.html("<pre>" + boardString + "</pre>");
       }, 1000
     );
-    console.log(xx);
+
+    key('up', function() { ui.board.snake.turn("N")});
+    key('down', function() { ui.board.snake.turn("S")});
+    key('left', function() { ui.board.snake.turn("W")});
+    key('right', function() { ui.board.snake.turn("E")});
+
   };
+
 
 })(this);

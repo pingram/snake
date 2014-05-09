@@ -45,7 +45,8 @@
       }
       printString += "\n";
     }
-    console.log(printString);
+    // console.log(printString);
+    return printString;
   };
 
 })(this);
