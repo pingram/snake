@@ -5,8 +5,10 @@
     <title>Snakes on Planes!</title>
     <script src="jquery.js"></script>
     <script src="underscore.js"></script>
+    <script src="keymaster.js"></script>
     <script src="snake.js"></script>
     <script src="board.js"></script>
+    <script src="snakeUI.js"></script>
 
     <link rel="stylesheet" href="snake.css" type="text/css">
   </head>
@@ -16,7 +18,12 @@
     </div>
 
     <script>
-      var board = new Snakes.Board($('#board'));
+      var ui = new Snakes.UI($('#board'));
+      key('up', function() { ui.board.snake.turn("N")});
+      key('down', function() { ui.board.snake.turn("S")});
+      key('left', function() { ui.board.snake.turn("W")});
+      key('right', function() { ui.board.snake.turn("E")});
+      ui.start();
     </script>
 
   </body>

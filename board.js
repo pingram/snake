@@ -24,7 +24,7 @@
   Board.prototype.render = function() {
 
     var printString = "";
-    var printCell = function (cell, isSnake) {
+    var printCell = function (isSnake) {
       if (isSnake) {
         printString += "S";
       } else {
@@ -41,7 +41,7 @@
             isSnake = true;
           }
         }
-        printCell(this.tiles[i][j], isSnake);
+        printCell(isSnake);
       }
       printString += "\n";
     }
