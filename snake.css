@@ -1,0 +1,35 @@
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body > * {
+}
+
+#board {
+  width: 500px;
+  margin: 0px auto;
+  outline: burlywood solid 10px;
+}
+
+#board:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+.tile {
+  outline: #F8F8F8 solid 1px;
+  width: 10px;
+  height: 10px;
+  float: left;
+}
+
+.snake {
+  background-color: green;
+}
+
+.snakehead {
+  background-color: red;
+}
